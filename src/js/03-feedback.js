@@ -30,6 +30,10 @@ function onFormSubmit(e) {
     
     localStorage.removeItem(LOCALSTORAGE_KEY);
     formEl.reset();
+
+    if (!dataSubmit.email || !dataSubmit.message) {
+        alert('Заполните все поля формы!');
+    }
 };
 
 function addData() {
